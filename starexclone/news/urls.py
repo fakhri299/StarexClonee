@@ -7,5 +7,5 @@ router=DefaultRouter()
 router.register(r'',NewsViewSet)
 
 urlpatterns = [
-   path('news/',include(router.urls))
+   path('',include(router.urls))
 ]

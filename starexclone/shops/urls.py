@@ -1,7 +1,8 @@
 from django.urls import path,include
-from .views import ShopListApiView,ShopByCategoryApiView
+from .views import ShopListApiView,ShopByCategoryApiView,CountryApi
 
 urlpatterns = [
-    path('shops',ShopListApiView.as_view()),
-    path('shops/<str:country>',ShopByCategoryApiView.as_view()),
+    path('',ShopListApiView.as_view()),
+    path('<slug:slug>',ShopByCategoryApiView.as_view()),
+    path('countries',CountryApi.as_view()),
 ]

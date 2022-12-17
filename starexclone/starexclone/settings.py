@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'users',
     'news',
     'shops',
+    'faq',
 
 
     'rest_framework',
