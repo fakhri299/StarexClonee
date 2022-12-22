@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'shops',
     'faq',
     'rates',
+    'contact',
 
 
     'rest_framework',
