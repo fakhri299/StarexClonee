@@ -22,4 +22,5 @@ urlpatterns = [
     path('news/',include('news.urls')),
     path('shops/',include('shops.urls')),
     path('faq/',include('faq.urls')),
+    path('rates/',include('rates.urls')),
 ]
