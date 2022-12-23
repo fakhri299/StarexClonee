@@ -11,10 +11,24 @@ class ContactStorageApi(ListAPIView):
 
     def get_queryset(self):
         slug=self.kwargs.get('country_slug')
-        return Contact.objects.filter(country__slug=slug)
+        return CountryContact.objects.filter(country__slug=slug)
 
 
 
 class CountryApi(ListAPIView):
     queryset=Country.objects.all()
     serializer_class=CountrySerializer
+
+
+class DistrictApi(ListAPIView):
+    queryset=District.objects.all()
+    serializer_class=DistrictSerializer
+
+
+class PointContactApi(ListAPIView):
+    serializer_class=ContactPointSerializer
+
+
+    def get_queryset(self):
+        slug=self.kwargs.get('point_slug')
+        return PointContact.objects.filter(slug=slug)

@@ -11,9 +11,21 @@ class CountrySerializer(ModelSerializer):
 class ContactSerializer(ModelSerializer):
     country=CountrySerializer()
     class Meta:
-        model=Contact
+        model=CountryContact
         fields='__all__'
 
+
+class DistrictSerializer(ModelSerializer):
+    class Meta:
+        model=District
+        fields='__all__'
+
+
+class ContactPointSerializer(ModelSerializer):
+    district=DistrictSerializer()
+    class Meta:
+        model=PointContact
+        fields='__all__'
 
 
 
