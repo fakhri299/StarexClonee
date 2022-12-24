@@ -2,22 +2,25 @@ from.models import *
 from rest_framework.serializers import ModelSerializer
 from rest_framework import serializers
 
-class CountrySerializer(ModelSerializer):
+
+
+
+class TarifSerializer(ModelSerializer):
     class Meta:
-        model=Country
-        fields='__all__'
-
-
+        model=Tarif
+        exclude=['countryandtype']
 
 class CargoMethodSerializer(ModelSerializer):
-    country=CountrySerializer()
+    tarif=TarifSerializer(many=True)
     class Meta:
-        model=CargoMethod 
+        model=RateType 
         fields='__all__'
 
 
-class RateSerializer(ModelSerializer):
-    type=CargoMethodSerializer()
+
+
+class CountrySerializer(ModelSerializer):
+    cargo_type=CargoMethodSerializer(many=True)
     class Meta:
-        model=Rate
+        model=Country
         fields='__all__'

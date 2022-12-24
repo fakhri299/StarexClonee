@@ -5,9 +5,11 @@ from rest_framework.permissions import AllowAny
 
 
 class RateApi(ListAPIView):
-    serializer_class=RateSerializer
+    serializer_class=CountrySerializer
 
     def get_queryset(self):
-        slug=self.kwargs.get('slug')
-        return Rate.objects.filter(type__country__slug=slug)
+        slug=self.kwargs.get('country_slug')
+        return Country.objects.filter(slug=slug)
+
+
        

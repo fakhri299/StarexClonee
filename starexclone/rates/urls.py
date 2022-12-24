@@ -3,5 +3,5 @@ from.views import *
 
 
 urlpatterns = [
-    path('<slug:slug>',RateApi.as_view())
+    path('<slug:country_slug>',RateApi.as_view())
 ]
