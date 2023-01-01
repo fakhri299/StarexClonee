@@ -20,7 +20,7 @@ class CargoMethodSerializer(ModelSerializer):
 
 
 class CountrySerializer(ModelSerializer):
-    cargo_type=CargoMethodSerializer(many=True)
+    cargo_type=CargoMethodSerializer(many=True,)
     class Meta:
         model=Country
         fields='__all__'
