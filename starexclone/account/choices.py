@@ -1,7 +1,7 @@
 MONTH_CHOICES=(
     ('yanvar','Yanvar'),
     ('fevral','Fevral'),
-    ('mart','Fart'),
+    ('mart','Mart'),
     ('aprel','Aprel'),
     ('may','May'),
     ('iyun','İyun'),
@@ -60,4 +60,13 @@ GENDER_CHOCIES=(
 DISTRICT_CHOICES=(
     ('bakı','Bakı'),
     ('gəncə','Gəncə'),
+)
+
+
+
+ID_CARD_SERIA_CHOICES=(
+    ('aze','AZE'),
+    ('aa','AA'),
+    ('myi','MYİ'),
+    ('dyi','DYİ')
 )
